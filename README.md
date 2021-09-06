@@ -4,16 +4,24 @@ Zoom Tap Animation is is a package that allows you to make an zoom animation eff
 
 - [Zoom Tap Animation](#zoom-tap-animation)
   - [Screenshots](#screenshots)
-  - [How To Use It](#how-to-use-it)
+  - [Installation](#installation)
+  - [Usage](#usage)
 
 ## Screenshots:
 
-## Source of idea:
+### Source of idea
+
 The idea is inspired from App Store app in Today tab where you can long tap on some item and it start to zoom in then zoom as shown in the screenshot below.
 
 <img src="screenshots/original_idea.gif" height="480px" >
 
-## How To Use It:
+### Example:
+
+Check out the example project in the example folder.
+
+<img src="screenshots/example.gif" height="480px" >
+
+## Installation:
 
 ### add the package to your dependencies
 
@@ -26,7 +34,9 @@ dependencies:
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 ```
 
-### default use of ZoomTapAnimation widget:
+## Usage:
+
+### default use of ZoomTapAnimation widget
 
 ```dart
 ZoomTapAnimation(
@@ -35,7 +45,7 @@ ZoomTapAnimation(
 );
 ```
 
-### and you can also define custom parameters:
+### and you can also define custom parameters
 
 ```dart
 ZoomTapAnimation(
@@ -50,7 +60,7 @@ ZoomTapAnimation(
 );
 ```
 
-### parameters:
+### parameters
 | parameter       | description                                                | default                           |
 |-----------------|------------------------------------------------------------|-----------------------------------|
 | child           | your child widget that you want to put the zoom effect on. |                                   |
