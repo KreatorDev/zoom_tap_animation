@@ -13,13 +13,13 @@ Zoom Tap Animation is is a package that allows you to make an zoom animation eff
 
 The idea is inspired from App Store app in Today tab where you can long tap on some item and it start to zoom in then zoom as shown in the screenshot below.
 
-<img src="screenshots/original_idea.gif" height="480px" >
+<img src="https://raw.githubusercontent.com/KreatorDev/zoom_tap_animation/main/screenshots/original_idea.gif" height="480px" >
 
 ### Example:
 
 Check out the example project in the example folder.
 
-<img src="screenshots/example.gif" height="480px" >
+<img src="https://raw.githubusercontent.com/KreatorDev/zoom_tap_animation/main/screenshots/example.gif" height="480px" >
 
 ## Installation:
 
