@@ -6,7 +6,7 @@ import 'package:flutter/widgets.dart';
 class ZoomTapAnimation extends StatefulWidget {
   final Widget child;
   final double begin, end;
-  final Duration duration, reverseDuration;
+  final Duration beginDuration, endDuration;
   final Function()? onTap;
   final Curve beginCurve, endCurve;
   const ZoomTapAnimation(
@@ -15,8 +15,8 @@ class ZoomTapAnimation extends StatefulWidget {
       this.onTap,
       this.begin = 1.0,
       this.end = 0.93,
-      this.duration = const Duration(milliseconds: 20),
-      this.reverseDuration = const Duration(milliseconds: 120),
+      this.beginDuration = const Duration(milliseconds: 20),
+      this.endDuration = const Duration(milliseconds: 120),
       this.beginCurve = Curves.decelerate,
       this.endCurve = Curves.fastOutSlowIn})
       : super(key: key);
@@ -31,7 +31,7 @@ class _ZoomTapAnimationState extends State<ZoomTapAnimation> with SingleTickerPr
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(vsync: this, duration: widget.reverseDuration, value: 1.0, reverseDuration: widget.duration);
+    _controller = AnimationController(vsync: this, duration: widget.endDuration, value: 1.0, reverseDuration: widget.beginDuration);
     _animation = Tween(begin: widget.end, end: widget.begin)
         .animate(CurvedAnimation(parent: _controller!, curve: widget.beginCurve, reverseCurve: widget.endCurve));
     _controller?.forward();
