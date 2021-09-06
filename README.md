@@ -2,8 +2,6 @@
 
 Zoom Tap Animation is is a package that allows you to make an zoom animation effect similar to App Store's (ios app) items in Today tab, when you long tap on some item, it start to zoom in then it zoom out when you release it.
 
-![](https://github.com/fluttercandies/Flutter_Candies/blob/master/gif/like_button/like_button.gif)
-
 - [Zoom Tap Animation](#zoom-tap-animation)
   - [Screenshots](#screenshots)
   - [How To Use It](#how-to-use-it)
