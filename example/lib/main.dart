@@ -53,6 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   onTap: () {
+                    // what should happen when you tap on the widget.
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                       content: Text(
                         'Tap Event',
@@ -63,11 +64,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ));
                   },
+                  // the size of widget you want to begin with.
                   begin: 1.0,
+                  // the size of widget you want to end with.
                   end: 0.9,
+                  // the duration of the begin zoom in animation.
                   beginDuration: const Duration(milliseconds: 20),
+                  // the duration of the end zoom in animation.
                   endDuration: const Duration(milliseconds: 120),
+                  // the curve animation type of the begin zoom in animation.
                   beginCurve: Curves.decelerate,
+                  // the curve animation type of the end zoom in animation.
                   endCurve: Curves.fastOutSlowIn),
           ],
         ),
