@@ -11,7 +11,7 @@ Zoom Tap Animation is is a package that allows you to make an zoom animation eff
 
 ### Source of idea
 
-The idea is inspired from App Store app in Today tab where you can long tap on some item and it start to zoom in then zoom as shown in the screenshot below.
+The idea is inspired from App Store app in Today tab where you can long tap on some item and it start to zoom in then zoom out as shown in the screenshot below.
 
 <img src="https://raw.githubusercontent.com/KreatorDev/zoom_tap_animation/main/screenshots/original_idea.gif" height="480px" >
 
@@ -27,7 +27,7 @@ Check out the example project in the example folder.
 
 ```dart
 dependencies:
-  zoom_tap_animation: ^1.0.0
+  zoom_tap_animation: ^1.1.0
 ```
 
 ```dart
@@ -51,6 +51,9 @@ ZoomTapAnimation(
 ZoomTapAnimation(
       child: YOUR_WIDGET,
       onTap: (){},
+      onLongTap: (){},
+      enableLongTapRepeatEvent: false,
+      longTapRepeatDuration: const Duration(milliseconds: 100),
       begin: 1.0,
       end: 0.93,
       beginDuration: const Duration(milliseconds: 20),
@@ -60,11 +63,28 @@ ZoomTapAnimation(
 );
 ```
 
+### also you can use ZoomTapAnimation with your custom gestures
+
+```dart
+ZoomTapAnimation(
+      child: GestureDetector(
+      onTap: () {},
+      onLongPress: (){},
+      onDoubleTap: (){},
+      // you can add more gestures...
+      child: Container(color: Colors.yellow, width: 100.0, height: 100.0),
+      ),
+);
+```
+
 ### parameters
 | parameter       | description                                                | default                           |
 |-----------------|------------------------------------------------------------|-----------------------------------|
 | child           | your child widget that you want to put the zoom effect on. |                                   |
 | onTap           | what should happen when you tap on the widget.             | null                              |
+| onLongTap       | what should happen when you long tap on the widget.        | null                              |
+| enableLongTapRepeatEvent | option to enable long tap loop which repeat every onTap event (in case onLongTap is specified, it repeats the onLongTap event). | false |
+| longTapRepeatDuration | the duration between every onTap/onLongTap loop event. | const Duration(milliseconds: 100) |
 | begin           | the size of widget you want to begin with.                 | 1.0                               |
 | end             | the size of widget you want to begin with.                 | 0.93                              |
 | beginDuration   | the duration of the begin zoom in animation.               | const Duration(milliseconds: 20)  |
