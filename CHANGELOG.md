@@ -1,4 +1,4 @@
-## 1.0.1
+## 1.1.0
 
 - added onLongTap
 - added onLongTap/onTap loop option
