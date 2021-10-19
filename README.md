@@ -1,5 +1,5 @@
 
-[![pub package](https://img.shields.io/pub/v/flutter_native_splash)](https://pub.dev/packages/flutter_native_splash)
+[![pub package](https://img.shields.io/pub/v/zoom_tap_animation)](https://pub.dev/packages/zoom_tap_animation)
 
 # Zoom Tap Animation
 
