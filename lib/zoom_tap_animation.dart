@@ -93,6 +93,7 @@ class _ZoomTapAnimationState extends State<ZoomTapAnimation>
           ? _onLongPress
           : null,
       child: Listener(
+          behavior: widget.behavior,
           onPointerDown: (c) async {
             // prevent the onTap event from beign triggered
             _isOnTap = true;
